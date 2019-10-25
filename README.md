@@ -1,4 +1,44 @@
+# this i my test website
 ## Welcome to GitHub Pages
+### Creating an AP Transaction
+```
+mutation {
+  createTran(
+    input: {
+      tran: {
+        companyid: "d5807643-d708-4844-825b-226294de53XX"
+        subsystemid: "6112ad25-b975-4888-abcd-3effc0809f6d"
+        ledgerid: "3a8c82d7-d1e1-4a3c-aa69-c20b7c14a53c"
+        trantypeid: "aa429136-73b7-40cd-9e25-dabace98a527"
+        currencyid: "214577de-661e-4c60-8e72-d097ca613dba"
+        termid: "be36165e-d065-40dc-94c2-7131f9294f33"
+        taxid: "5fd1b428-bf54-4d58-a661-1aa2f7ce482c"
+        transDate: "2018-10-30"
+        amount: 200
+        taxAmt: 0
+        discAmt: 0
+        reference: "9999-22121"
+        description: "AP tran"
+        entRoleList: [
+          {
+            entityid: "d5873e8a-a97d-4a0c-b535-b86522d0e9ee"
+            roleid: "618fa3a4-d4cf-40d2-a5d2-cbad491a75b2"
+          }
+        ]
+      }
+    }
+  ) {
+    tran {
+      transNo
+      id
+      documentNo
+      transDate
+    }
+  }
+}
+
+
+```
 
 You can use the [editor on GitHub](https://github.com/flyingkiwi07/documentation/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
